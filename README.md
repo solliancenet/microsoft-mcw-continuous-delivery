@@ -40,17 +40,18 @@ Susan is looking to take a step in this direction with the following goals in mi
 - Increase visibility into system operations and health.
   - Aggregate views of health across the web sites deployed
 
-To address the issues and progress towards the goals, Susan asks a high-end consultancy firm to help her. The first ask is to come up with a possible implementation for the goals that are set. Furthermore,there are some requirements that need to be addresses in the proposed design.
+To address the issues and progress towards the goals, Susan asks a high-end consultancy firm to help her. The first ask is to come up with a possible implementation for the goals that are set. Furthermore, there are some requirements that need to be addresses in the proposed design.
 - Reduce the overhead in time, complexity, and cost for deploying new conference tenants.
 - Improve the reliability of conference tenant updates.
-- Choose a suitable platform for their conference solution. The platform choice should:oMake it easy to deploy and manage infrastructure.
+- Choose a suitable platform for their conference solution. The platform choice should:
+  - Make it easy to deploy and manage infrastructure.
   - Provide tooling to help them with monitoring and managing container health and security.
   - Provide a vendor neutral solution so that a specific on-premises or cloud environment does not become a new dependency.
   - Start with Azure since that is already in their Enterprise Agreement
 - Migrate data from MongoDB on-premises to CosmosDB with the least change possible to the application code.
 - Make use of GitHub and / or Azure DevOps for Development Lifecycle
 - Use Git repositories for source control and integrate into a CICD workflow.
-- Embed code reviewand security scanning in to the development workflow
+- Embed code review and security scanning in to the development workflow
 - Solution that does not incur a direct vendor-lock in
 - As much re-use of existing code base
 - Complete an implementation of the proposed solution for a single tenant to train the team and perfect the process.
@@ -60,6 +61,8 @@ May 2021
 ## Target audience
 
 -	Application developer
+-   System Reliability Engineer
+-   Infrastructure Architect
 
 ## Abstracts
 
@@ -108,3 +111,27 @@ We welcome feedback and comments from Microsoft SMEs & learning partners who del
 If you are planning to present a workshop, *review and test the materials early*! We recommend at least two weeks prior.
 
 ### Please allow 5 - 10 business days for review and resolution of issues.
+
+## Tentative Exercises Outline
+
+- Continuous Delivery hands-on lab step-by-step
+  - Abstract and learning objectives
+  - Overview
+  - Solution architecture
+  - Requirements
+  - Before the hands-on lab
+  - Exercise 1: Improving Developer Flow
+    - Task 1: Connect Azure Board with Github
+    - Task 2: Run the Application Locally
+    - Task 3: Containerize the Application
+    - Task 4: Optimize Docker Build
+    - Task 5: Using Dependabot
+    - Task 6: Set up Local Infrastructure
+    - Task 7: Continuous Integration with Github Registry
+  - Exercise 2: Deploy to the Cloud
+    - Task 1: Set up Cloud Infrastructure
+    - Task 2: Running Containers in Azure Web App
+  - Exercise 3: Monitoring and Logging in Azure
+    - Task 1: Set up Application Insights
+    - Task 2: Continuous Deployment with Github Actions
+    
