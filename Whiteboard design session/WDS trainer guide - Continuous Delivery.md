@@ -1,7 +1,7 @@
-![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](../Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Continuous delivery in Azure DevOps
+Continuous Delivery
 </div>
 
 <div class="MCWHeader2">
@@ -9,7 +9,7 @@ Continuous delivery in Azure DevOps
 </div>
 
 <div class="MCWHeader3">
-June 2020
+June 2021
 </div>
 
 
