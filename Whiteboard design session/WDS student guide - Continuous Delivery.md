@@ -66,29 +66,22 @@ Directions: With all participants in the session, the facilitator/SME presents a
 
 ### Customer situation
 
-Tailspin Toys, the world's most innovative construction toy company, was established to make and sell what has become one of the world's leading integrated construction systems for children. From the living room to the classroom, it encourages people of all ages to imagine, build, and play. It is committed to the development of children and aims to inspire and develop the builders of tomorrow through creative play and learning. Its products are sold worldwide and can be virtually explored on its public website.
+Fabrikam Medical Conferences provides conference web site services tailored to the medical community. They started out 10 years ago building a few conference sites for a small conference organizer. Since then, word of mouth has spread, and Fabrikam 
+Medical Conferences is now a well-known industry brand. They currently handle over 100 conferences per year and growing.
 
-Tailspin Toys is based in the United States and is headquartered in Portland, OR.
+Websites for medical conferences are typically low budget web sites because the conferences usually have between 100 to 1500 attendees. At the same time, the conference owners have significant customization and change demands that require turnaround on a dime to the live sites. These changes can impact various aspects of the system from UI through to the back end, including conference registration and payment terms.
 
 Tailspin Toys saw the positive potential of the cloud and moved its IT infrastructure, with no significant re-architecture, into Microsoft Azure around six months ago. Now that its business is running successfully in the cloud, it has started a series of process improvements to become a more agile company with a specific focus on delivering frequent feature updates and fixes to its public website. Alex Montgomery, VP of sales and the head of its online business team, says that, "Even though our products are better, our competitors are generating more online sales than we are. For every feature that we deliver to our website, they have delivered 2 or 3. Our development processes are too cumbersome and slow for us to build quality code at that pace."
 
-When it moved its existing systems into Microsoft Azure, Tailspin Toys decided to use the Azure App Service to host its public website which is written as an Angular front-end with an ASP.NET Core API. For the database (back-end) tier, they chose the Azure PostgreSQL Database service for full Platform-as-a-Service agility.
-
 **Public website and data layer**
 
-Todd Culp is the enterprise architect at Tailspin Toys, and he is responsible for the application and development team's environments in Azure. He has also been tasked with changing the development processes for his team so they can be more agile and adaptive in the marketplace.
+The VP of Engineering at Fabrikam, Susan Withers, has a team of 12 developers who handle all aspects of development, testing, deployment, and operational management of their customer sites. Due to customer demands, they have issues with the efficiency and reliability the conference websites. This mainly caused by an inefficient development and operations workflow.
 
-The public website is currently deployed as an Angular front-end Web App with an ASP.NET Core API in an App Service Plan in the S3 tier. The development team is hosting its source control for the system in Visual Studio Team Services using a Git repository with branches set up for multiple environments including "development," "test," and "master." As they get close to a release point, the developers have a manual internal code review and QA process in which they debug the application on each other's machines and run through some use cases to test new and existing features in the application. When the build is ready, they manually deploy updates to the website through Visual Studio or FTP. Todd has been tasked with automating the entire process of testing, building, and deploying to the cloud for both the QA team, so they can fully test new builds in a realistic cloud environment, and for the developers, so they cannot deploy any builds that fail the test suite. The builds for the different environments should not affect each other, and there must be an easy way to promote a tested build to production.
+In the current situation, the conference sites are hosted on-premises with the following topology and platform implementation:
 
-Todd requires the development team to run unit and integration tests for every build, but there is no formal procedure or accountability over this process within the team. Also, he always makes the team sign off on the build before it goes live, but there have been some bugs that appeared in production that should have been caught by a software-based test before deployment. He thinks the developers are not consistently running all required tests and needs an automated way to enforce this before builds are deployed into the cloud.
-
-When customers encounter problems on the website, the Tailspin Toys' help desk team records the issues and submits them as tickets to the development team. The developers often complain about the quality of the application logs and must resort to a live "reproduction session" to witness application behavior and exceptions (especially for JavaScript bugs or timeouts between application layers). This sometimes causes the help desk tickets to remain unresolved for lengthy periods of time.
-
-Todd wants to improve the turnaround time for fixing these bugs, and he needs better logs for the developers. He needs a solution to gather new types of logs including browser errors and application dependency errors such as timeouts. Ideally, he wants to make the application logs searchable as well as implement an automated warning system that emails alerts when application behavior is unusually slow or problematic.
-
-**Existing solution architecture**
-
-![This is a diagram of Tailspin Toys existing solution architecture. On the left is a Visual Studio icon and the words "development," "test," and "master," which represents the development team hosting its source control in Azure DevOps with branches set up for development, test, and master environments. Three arrows point from these environments to a server and monitor icon on the right labeled Manual internal code review & QA on local developer machines. An arrow points from this icon to another Visual Studio icon on the right labeled Visual Studio/FTP, which represents developers manually deploying updates through Visual Studio or FTP. Two arrows point from this icon to two icons on the right: on the top, Azure App Service with Web App (S3 Instance), and on the bottom, Azure PostgreSQL Database (S1 Instance).](images/studentguide/media/image2.png "Existing solution architecture diagram")
+- The conference web sites are built with the MEAN stack (Mongo, Express, Angular, Node.js).
+- Web sites and APIs are hosted on Linux machines.
+- MongoDB is also running on a separate cluster of Linux machines.
 
 ### Customer needs 
 
