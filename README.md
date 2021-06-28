@@ -112,23 +112,4 @@ If you are planning to present a workshop, *review and test the materials early*
 
 ### Please allow 5 - 10 business days for review and resolution of issues.
 
-## Tentative Exercises Outline
-
-- Continuous Delivery hands-on lab step-by-step
-  - Abstract and learning objectives
-  - Overview
-  - Solution architecture
-  - Requirements
-  - Before the hands-on lab
-  - Exercise 1: Continuous Integration
-    - Task 1: Connect Azure Board with Github
-    - Task 2: Using Dependabot
-    - Task 3: Set up Local Infrastructure
-    - Task 4: Build Automation with Github Registry
-  - Exercise 2: Continuous Delivery
-    - Task 1: Set up Cloud Infrastructure
-    - Task 2: Deployment Automation to Azure Web App
-  - Exercise 3: Monitoring and Logging in Azure
-    - Task 1: Set up Application Insights
-    - Task 2: Continuous Deployment with Github Actions
     
